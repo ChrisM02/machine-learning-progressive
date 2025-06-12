@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+.env
+.venv
+*.pyc
+
+# C/C++
+*.o
+*.exe
+
+# Assembly
+*.obj
+*.bin
+
+# General
+.DS_Store
+*.log
