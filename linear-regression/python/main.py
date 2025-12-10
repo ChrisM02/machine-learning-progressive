@@ -1,6 +1,6 @@
 ## Author: Chris McDonald
 ## Creation Date: 16-May-2025
-## Last Updated: 12-June-2025
+## Last Updated: 13-June-2025
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -8,7 +8,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.preprocessing import StandardScaler
 
-df = pd.read_csv('linear-regression/dataset/advertising.csv', index_col=0)
+df = pd.read_csv('linear-regression/data/advertising.csv', index_col=0)
 
 eval = df.sample(n=1, random_state=42) ## Pick a row for final visual testing
 df = df.drop(eval.index) ## Drop row from DataFrame
@@ -40,3 +40,6 @@ y_eval_pred = model.predict(X_eval)[0]
 print(f"Evaluating model using: {X_eval}\n\n")
 print(f"Scaler redicted sales: {y_eval_pred:.2f}")
 print(f"Actual sales: {y_eval}")
+
+print("Model coefficients:", model.coef_)
+print("Model intercept:", model.intercept_)
