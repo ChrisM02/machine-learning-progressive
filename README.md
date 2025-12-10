@@ -1,20 +1,74 @@
-1. Python
+## Variations
 
-- .venv
-- main.py
+### 1. Python
 
-2. C++ (g++)
+| Environment | File    |
+| :---------: | :------ |
+|    .venv    | main.py |
 
-- main.cpp
+### 2. C++
 
-3. C (gcc)
+| Compiler | File     |
+| :------: | :------- |
+|   g++    | main.cpp |
 
-- main.c
+### 3. C
 
-4. Assembly (Potential Future Development)
-   4.1 Windows
-   4.1.1 NASM 64-bit - build.bat - main.asm
-   4.1.2 MASM 64-bit - build.bat - main.asm
-   4.2 Linux
-   4.2.1 NASM - build.sh - main.asm
-   4.2.2 GAS - build.sh - main.asm
+| Compiler | File   |
+| :------: | :----- |
+|   gcc    | main.c |
+
+### 4. Assembly (Potential Future Development)
+
+|   OS    |  Assembler  | Build Script |   File   |
+| :-----: | :---------: | :----------: | :------: |
+| Windows | NASM 64-bit |  build.bat   | main.asm |
+| Windows | MASM 64-bit |  build.bat   | main.asm |
+|  Linux  | NASM 64-bit |   build.sh   | main.asm |
+|  Linux  | GAS 64-bit  |   build.sh   | main.asm |
+
+## File Structure
+
+This is the basic file structure I will stick to for each application, this is subject to change based on the number of scripts I use in each part.
+
+```
+.../
+    assembly/
+        windows/
+            masm/
+                build.bat
+                main.asm
+            nasm/
+                build.bat
+                main.asm
+        linux/
+            gas/
+                build.sh
+                main.asm
+            nasm/
+                build.sh
+                main.asm
+    c++/
+        main.cpp
+        build/
+            windows/
+                main.o
+                app.exe
+            linux/
+                main.o
+                app
+    c/
+        main.c
+        build/
+            windows/
+                main.o
+                app.exe
+            linux/
+                main.o
+                app
+    data/
+            # Varies based on application
+    python/
+        .venv/
+        main.py
+```
