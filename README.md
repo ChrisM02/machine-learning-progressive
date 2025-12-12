@@ -69,6 +69,7 @@ This is the basic file structure I will stick to for each application, this is s
     data/
             # Varies based on application
     python/
-        .venv/
+        venv/
         main.py
+    README.MD
 ```

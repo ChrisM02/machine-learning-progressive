@@ -10,8 +10,8 @@ from sklearn.preprocessing import StandardScaler
 
 df = pd.read_csv('linear-regression/data/advertising.csv', index_col=0)
 
-eval = df.sample(n=1, random_state=42) ## Pick a row for final visual testing
-df = df.drop(eval.index) ## Drop row from DataFrame
+eval = df.sample(n=5, random_state=42) ## Pick rows for final visual testing
+df = df.drop(eval.index) ## Drop rows from DataFrame
 
 X = df[['TV', 'radio', "newspaper"]]
 y = df['sales']
